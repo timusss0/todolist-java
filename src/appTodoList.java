@@ -15,6 +15,7 @@ public class appTodoList {
 
             if(todo != null){
                 System.out.println(no + ". " + todo);
+                break;
             }
         }
     }
@@ -28,7 +29,7 @@ public class appTodoList {
 
 
 //   menambahkan
-    public static void addTodoList(){
+    public static void addTodoList(String todo){
 
     }
 
