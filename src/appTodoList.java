@@ -4,7 +4,7 @@ public class appTodoList {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-        testShowTodoList();
+        testAddToDoList();
     }
 //LOGIC
 //menampikan todo ke list
@@ -62,6 +62,14 @@ public class appTodoList {
                 break;
             }
         }
+    }
+
+//    TEST ADD TODO
+    public static void testAddToDoList(){
+        for (int i = 0; i < 25; i++) {
+            addTodoList("contoh todo ke "  + i);
+        }
+        showTodoList();
     }
 
 
