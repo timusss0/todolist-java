@@ -8,12 +8,31 @@ public class appTodoList {
 
 //    menampilkan
     public static void showTodoList(){
+//        cek apakah model penuh?
+        var isFull = true;
+        for(int i = 0; i < model.length; i++){
+            if(model[i] == null){
+//                modeel masih ada yg kosong
+                isFull = false;
+                break;
+            }
+        }
+
+//        jika penuh kita resize array jadi 2x lipat
+        if(isFull){
+            var temp = model;
+            model = new String[model.length * 2];
+            for (var i = 0; i < temp.length; i++){
+                model[i] = temp[i];
+            }
+        }
+
         for (var i = 0; i < model.length; i ++ ){
             var todo = model[i];
             var no = i + 1;
 
 
-            if(todo != null){
+            if(todo == null){
                 System.out.println(no + ". " + todo);
                 break;
             }
