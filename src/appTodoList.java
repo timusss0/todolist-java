@@ -1,75 +1,42 @@
+//langkah pertama membuat aplikasi adalah dengan membuat MODEL atau bisa di bilang data
 public class appTodoList {
-
+    //    string
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-    testShowTodoList();
-    }
 
-//    menampilkan
+    }
+//MODELLLL
+//menampikan todo ke list
     public static void showTodoList(){
-//        cek apakah model penuh?
-        var isFull = true;
-        for(int i = 0; i < model.length; i++){
-            if(model[i] == null){
-//                modeel masih ada yg kosong
-                isFull = false;
-                break;
-            }
-        }
 
-//        jika penuh kita resize array jadi 2x lipat
-        if(isFull){
-            var temp = model;
-            model = new String[model.length * 2];
-            for (var i = 0; i < temp.length; i++){
-                model[i] = temp[i];
-            }
-        }
-
-        for (var i = 0; i < model.length; i ++ ){
-            var todo = model[i];
-            var no = i + 1;
-
-
-            if(todo == null){
-                System.out.println(no + ". " + todo);
-                break;
-            }
-        }
     }
+//menambahkan todo ke list
+    public static void addTodoList(){
 
-    public static void testShowTodoList(){
-        model[0] = "belajar java dasar";
-        model[1] = "belajar buat project";
-        model[2] = "siapa kamu?";
-        showTodoList();
     }
-
-
-//   menambahkan
-    public static void addTodoList(String todo){
+//menghapus todo di list
+    public static void removeToDoList(){
 
     }
 
 
-//    menghapus
-    public static void removeTodoList(){
 
-    }
+//VIEWW
 
-//   menampilkan showTodoList
+//    menampilkan view todo list
     public static void viewShowTodoList(){
 
     }
 
-//   menampilakn addtodolist
-    public static void viewaddTodolist(){
+//    menambahkan view todo list
+    public static void viewAddTodoList(){
 
     }
 
-//    removeTodoList
+//    menghapus view todo list
     public static void viewRemoveTodoList(){
 
     }
+
 }
