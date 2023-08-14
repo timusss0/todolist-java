@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 //langkah pertama membuat aplikasi adalah dengan membuat MODEL atau bisa di bilang data
 public class appTodoList {
     //    string
     public static String[] model = new String[10];
 
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
+
     public static void main(String[] args) {
-        testRemoveTodoList();
+       testInput();
     }
 
     //LOGIC
@@ -72,6 +76,23 @@ public class appTodoList {
         }
         showTodoList();
     }
+
+    public static String input(String info){
+        System.out.print(info + ":");
+        String data = scanner.nextLine();
+        return data;
+    }
+
+    public static void testInput(){
+        var name = input("nama ");
+        System.out.println("hai " + name);
+
+
+        var univ = input("Universitas");
+        System.out.println(univ);
+    }
+
+
 
 
     //menghapus todo di list
