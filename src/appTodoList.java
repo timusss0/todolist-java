@@ -8,7 +8,7 @@ public class appTodoList {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        testViewShowTodolist();
+        testViewAddTodoList();
     }
 
     //LOGIC
@@ -37,7 +37,6 @@ public class appTodoList {
 
     //menambahkan todo ke list
     public static void addTodoList(String todo) {
-
 //        bagaimana jika array sudah penuh?
 //        cek sudah penuh atau belum
 //        apakah model penh?
@@ -170,8 +169,25 @@ public class appTodoList {
 
 //    menambahkan view todo list
     public static void viewAddTodoList(){
+        System.out.println("menambahkan todo list");
 
+        var todo = input("Todo (x Jika Batal)");
+
+        if(todo.equals("x")){
+//            batal
+        }else{
+            addTodoList(todo);
+        }
     }
+
+    public static void testViewAddTodoList(){
+        addTodoList("satu");
+        addTodoList("dua");
+        viewAddTodoList();
+
+        showTodoList();
+    }
+
 
 //    menghapus view todo list
     public static void viewRemoveTodoList(){
