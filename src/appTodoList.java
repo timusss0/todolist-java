@@ -8,12 +8,13 @@ public class appTodoList {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-       testInput();
+        testViewShowTodolist();
     }
 
     //LOGIC
 //menampikan todo ke list
     public static void showTodoList() {
+        System.out.println("TODOLIST");
         for (var i = 0; i < model.length; i++) {
             var todo = model[i];
             var no = i + 1;
@@ -135,8 +136,37 @@ public class appTodoList {
 
 //    menampilkan view todo list
     public static void viewShowTodoList(){
+        while(true) {
+            showTodoList();
+            System.out.println("MENU");
+            System.out.println("1. Tambah ");
+            System.out.println("2. Hapus");
+            System.out.println("3. Keluar");
+
+            var input = input("PIlih");
+
+            if (input.equals("1")) {
+                    viewAddTodoList();
+            } else if (input.equals("2")) {
+                    viewRemoveTodoList();
+            } else if(input.equals("3")){
+                    break;
+            }else {
+                    System.out.println("Pilihan tidak di mengerti");
+                }
+        }
 
     }
+
+    public static void testViewShowTodolist(){
+        addTodoList("satu");
+        addTodoList("dua");
+        addTodoList("tigas");
+        addTodoList("empat");
+        addTodoList("lima");
+        viewShowTodoList();
+    }
+
 
 //    menambahkan view todo list
     public static void viewAddTodoList(){
